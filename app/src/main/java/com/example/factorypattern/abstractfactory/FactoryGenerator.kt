@@ -1,6 +1,7 @@
 package com.example.factorypattern.abstractfactory
 
 import com.example.factorypattern.BreadFactory
+import com.example.factorypattern.drinks.DrinkFactory
 import com.example.factorypattern.enums.FactoryTypes
 import com.example.factorypattern.filling.FillingFactory
 
@@ -11,6 +12,7 @@ class FactoryGenerator {
             return when(type){
                 FactoryTypes.FILLING -> FillingFactory()
                 FactoryTypes.BREAD -> BreadFactory()
+                FactoryTypes.DRINK -> DrinkFactory()
             }
         }
 

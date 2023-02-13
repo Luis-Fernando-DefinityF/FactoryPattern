@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import com.example.factorypattern.abstractfactory.FactoryGenerator
+import com.example.factorypattern.drinks.DrinkFactory
 import com.example.factorypattern.enums.BreadType
 import com.example.factorypattern.enums.FactoryTypes
 import com.example.factorypattern.filling.FillingFactory
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     private val breadFactory: BreadFactory = FactoryGenerator.getFactory(FactoryTypes.BREAD) as BreadFactory
 //    private val fillingFactory: FillingFactory = FactoryGenerator.getFactory(FactoryTypes.FILLING) as FillingFactory
+    private val drinkFactory:DrinkFactory = FactoryGenerator.getFactory(FactoryTypes.DRINK) as DrinkFactory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
